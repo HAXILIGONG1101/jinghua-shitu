@@ -1,0 +1,17 @@
+{
+  "name": "jinghua-shitu",
+  "private": true,
+  "version": "1.2.0",
+  "description": "京华·仕途 V1.2 — 五页、六项属性的单机城市治理模拟游戏",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "npm --prefix packages/web run dev",
+    "build": "npm --prefix packages/web run build",
+    "typecheck": "npm --prefix packages/web run typecheck",
+    "preview": "npm --prefix packages/web run preview -- --host 127.0.0.1 --port 5273",
+    "test:e2e": "node scripts/v12-e2e.mjs"
+  }
+}

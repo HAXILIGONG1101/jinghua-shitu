@@ -1,0 +1,38 @@
+# 本地运行和旧版本备份不上传到公开仓库。
+node_modules/
+**/node_modules/
+.cache/
+archive/
+work/
+packages/web/dist/
+tools/cloudflared.exe
+
+# V1.1 复杂系统只保留在本机备份,不进入 V1.2 发布版本。
+packages/server/
+packages/shared/
+data/
+scripts/build-street-anchors.mjs
+scripts/e2e.mjs
+scripts/fetch-data.mjs
+scripts/fetch-indicators.py
+scripts/make-icons.mjs
+scripts/quest-e2e.mjs
+scripts/quest-stability.mjs
+scripts/save-slots-e2e.mjs
+scripts/smoke.mjs
+allow-phone-access.cmd
+install-*.cmd
+install-*.vbs
+remove-*.cmd
+start*.cmd
+start*.ps1
+start*.vbs
+stop-public-watchdog.cmd
+watchdog-*
+
+# 系统和编辑器文件。
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

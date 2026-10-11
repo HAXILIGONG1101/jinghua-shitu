@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #efeae0;
+  color: #23201c;
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+}
+
+.num {
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-paper-edge rounded;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded border px-3 py-2 text-[13px] font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply border-seal bg-seal text-white hover:bg-seal-light;
+  }
+  .btn-ghost {
+    @apply border-paper-edge bg-white text-ink-soft hover:border-ink-mute hover:text-ink;
+  }
+  .btn-quiet {
+    @apply border-transparent bg-transparent text-ink-mute hover:bg-paper-dim hover:text-ink;
+  }
+  .tag {
+    @apply inline-flex items-center gap-1 rounded-sm border border-paper-edge bg-paper px-1.5 py-0.5 text-[10.5px] leading-4 text-ink-soft;
+  }
+  .label {
+    @apply text-[11px] text-ink-mute;
+  }
+  .panel-title {
+    @apply text-[13px] font-semibold text-ink flex items-center gap-1.5;
+  }
+  .rule {
+    @apply border-t border-paper-edge;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfc6b4;
+  border: 2px solid #efeae0;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #efeae0;
+}
